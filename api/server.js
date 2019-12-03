@@ -1,6 +1,6 @@
 const express = require('express');
 
-// const hubsRouter = require('../hubs/hubs-router.js');
+const postsRouter = require('../posts/posts-router');
 
 const server = express();
 
@@ -13,7 +13,7 @@ server.get('/', (req, res) => {
   `);
 });
 
-// server.use('/api/hubs', hubsRouter);
+server.use('/api/posts', postsRouter);
 
 // add an endpoint that returns all the messages for a hub
 // add an endpoint for adding new message to a hub
